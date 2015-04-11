@@ -62,11 +62,11 @@ var RandomFlix = new function()
     jQuery(".episodeList li").eq(random_episode_number - 1).trigger("click");
     
     //Click for Netflix originals
-    video_href = jQuery(".episodes li").eq(0).find(".playButton").attr("href");
+    play_button = jQuery(".episodes li").eq(random_episode_number - 1).find(".playButton");
     
-    if (!(typeof video_href === 'undefined'))
+    if (play_button)
     {
-      window.location.href = video_href;
+      window.location.href = play_button.attr("href");
     }
   }
   
