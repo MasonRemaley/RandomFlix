@@ -64,7 +64,7 @@ var RandomFlix = new function()
     //Click for Netflix originals
     video_href = jQuery(".episodes li").eq(0).find(".playButton").attr("href");
     
-    if (typeof video_href !=== 'undefined')
+    if (!(typeof video_href === 'undefined'))
     {
       window.location.href = video_href;
     }
@@ -88,5 +88,4 @@ var RandomFlix = new function()
   }
 };
 
-alert("Test version 5");
 RandomFlix.main();
