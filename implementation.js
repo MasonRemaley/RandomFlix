@@ -93,7 +93,7 @@ var RandomFlix = new function()
     console.log("main()");
     alert("?");
     
-    if (jQuery(".seasons").count > 0)
+    if (jQuery(".seasons").length > 0)
     {
       alert("Original show");
     }
