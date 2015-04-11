@@ -17,7 +17,7 @@ function RandomFlix()
   function choose_season()
   {
     var season_count = $("#seasonsNav li").length;
-    var season_number = random(0, season_count);
+    var season_number = random(season_number - 1, season_count);
     original_season_id = current_season_id();
     $("#seasonsNav li").eq(0).trigger("click");
   }
@@ -43,6 +43,7 @@ function RandomFlix()
     }, 100);
   }
   
+  alert($("#selectorButton .selectorText").html());
   choose_season();
   choose_episode_after_update();
 };
