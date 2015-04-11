@@ -20,8 +20,13 @@ $( document ).ajaxComplete(function() {
   
 });
 
+$( document ).ajaxStart(function() {
+  alert("Ajax start!");
+  
+});
+
 $(document).ajaxError(function(e, jqxhr, settings, exception) {
   alert(exception);
 });
 
-alert("Setup ajax handlers");
+alert("complete/start/error");
