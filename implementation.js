@@ -23,6 +23,9 @@ function RandomFlix()
     var new_season_number = random(1, season_count);
     $("#seasonsNav li").eq(season_count - 1).trigger("click"); //new_season_number - 1
     
+    console.log("Original Season: " + original_season_number);
+    console.log("New Season: " + new_season_number);
+    
     if (original_season_number == new_season_number)
     {
       choose_episode();
