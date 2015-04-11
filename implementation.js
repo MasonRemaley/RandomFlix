@@ -1,5 +1,7 @@
 //Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 //Use smaller delay in loop if that hmakes it faster
+//
+
 var RandomFlix = new function()
 {
   var original_season_id;
