@@ -13,7 +13,8 @@ timer = setInterval(function()
     clearInterval(timer);
     
     var episode_count = $(".episodeList li").length;
-    alert("Episodes: " + episode_count);
+    $("#episodeList li").eq(episode_count - 1).trigger("click");
+    //alert("Episodes: " + episode_count);
   }
 }, 100);
 
