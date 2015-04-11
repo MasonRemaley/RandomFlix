@@ -1,6 +1,6 @@
 //what if implementation.js loads BEFORE jquery? won't this script then FAIL?
 
-var season_count = $("#seasonsNav li").length;
+/*var season_count = $("#seasonsNav li").length;
 alert("Seasons: " + season_count + " click last");
 
 $("#seasonsNav li").eq(season_count - 1).click(function()
@@ -13,4 +13,8 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
 //).done(function()
 //{
   alert("Done clicking without 'when'");
-//});
+//});*/
+
+$( document ).ajaxComplete(function() {
+  $( ".log" ).text( "Triggered ajaxComplete handler." );
+});
