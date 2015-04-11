@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<!-- I think the Netflix already loads jquery, I coudln't get it to work but maybe they just don't use the $() shortcut thing? -->
-
+<!-- load using jquery? -->
+<!-- check on special pages -->
 <html>
 	<head>
 		<title>RandomFlix</title>
@@ -10,15 +10,6 @@
 	<body>
 		<a href="javascript:(function()
 		{
-			if (window.jQuery)
-			{
-				alert('jQuery loaded');
-			}
-			else
-			{
-				alert('jQuery NOT loaded');
-			}
-				
 			randomflix = document.createElement('script');
 			randomflix.type = 'text/javascript';
 			randomflix.src = 'http://masonremaley.github.io/RandomFlix/implementation.js';
