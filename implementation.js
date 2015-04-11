@@ -15,6 +15,10 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
   alert("Done clicking without 'when'");
 //});*/
 
+$.ajaxSetup({
+  global: true
+});
+
 $( document ).ajaxComplete(function() {
   alert("Ajax complete!");
   
@@ -29,4 +33,4 @@ $(document).ajaxError(function(e, jqxhr, settings, exception) {
   alert(exception);
 });
 
-alert("complete/start/error");
+alert("complete/start/error + global");
