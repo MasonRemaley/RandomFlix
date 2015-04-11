@@ -12,5 +12,5 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
   $("#seasonsNav li").eq(season_count - 1).trigger("click");
 //).done(function()
 //{
-  alert("Done clicking with 'when'");
+  alert("Done clicking without 'when'");
 //});
