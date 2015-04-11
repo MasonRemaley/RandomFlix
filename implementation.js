@@ -23,7 +23,7 @@ var RandomFlix = new function()
     var original_season_number = $("#selectorButton .selectorTxt").html();
     var season_count = $("#seasonsNav li").length;
     var new_season_number = random(1, season_count);
-    $("#seasonsNav li").eq(season_count - 1).trigger("click"); //new_season_number - 1
+    $("#seasonsNav li").eq(new_season_number - 1).trigger("click"); //new_season_number - 1
     
     console.log("Original Season: " + original_season_number);
     console.log("New Season: " + new_season_number);
