@@ -18,7 +18,7 @@ timer = setInterval(function()
     episode = $(".episodeList li").eq(0);
     //alert(episode.attr("data-episodeid"));
     //alert("Click 0");
-    $(".episodeList li").eq(0).trigger("click");
+    $(".episodeList li").eq(episode_count - 1).trigger("click");
     //alert("Episodes: " + episode_count);
   }
 }, 100);
