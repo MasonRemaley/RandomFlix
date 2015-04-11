@@ -1,5 +1,3 @@
-//Use smaller delay in loop if that hmakes it faster
-
 var RandomFlix = new function()
 {
   //Main
