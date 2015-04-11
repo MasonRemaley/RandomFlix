@@ -25,10 +25,8 @@ var RandomFlix = new function()
     }
   }
   
-  this.main = function()
+  function normal_show()
   {
-    console.log("main()");
-    
     original_season_id = current_season_id();
     console.log("Original season id: " + original_season_id);
     var original_season_number = jQuery("#selectorButton .selectorTxt, .seasonSelector .option-selected a span").html();
@@ -88,6 +86,20 @@ var RandomFlix = new function()
         choose_episode();
       }
     }, 100);
+  }
+  
+  this.main = function()
+  {
+    console.log("main()");
+    
+    if (jQuery(".seasons").count > 0)
+    {
+      alert("Original show");
+    }
+    else
+    {
+      normal_show();
+    }
   }
 };
 
