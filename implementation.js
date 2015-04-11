@@ -4,7 +4,7 @@ var season_count = $("#seasonsNav li").length;
 alert("Seasons: " + season_count + " click last");
 
 $.when(
-  $("#seasonsNav li").eq(season_count - 1).trigger("click");
+  $("#seasonsNav li").eq(season_count - 1).trigger("click")
 ).done(function()
 {
   var episode_count = $(".episodeList li").length;
