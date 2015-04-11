@@ -10,6 +10,10 @@ alert(loading.css("display"));
 season.trigger("click");
 alert(loading.css("display"));
 
+while (loading.css("display") == "block") {}
+
+alert(loading.css("display"));
+
 //while (loading.css("display") != "none") {}
 
 //alert(season.hasClass("selected"));
