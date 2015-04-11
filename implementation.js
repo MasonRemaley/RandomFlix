@@ -1,4 +1,7 @@
-function count_episodes()
+var RandomFlix =
 {
-	alert($(".episodeList li").length);
-}
+	function count_episodes()
+	{
+		alert($(".episodeList li").length);
+	}
+};
