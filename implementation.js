@@ -1,4 +1,5 @@
 function count_episodes()
 {
-	alert($(".episodeList li").length);
+	alert("Hello");
+	//alert($(".episodeList li").length);
 }
