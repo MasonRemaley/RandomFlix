@@ -1,9 +1,8 @@
-//Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 //Use smaller delay in loop if that hmakes it faster
-//if it goes to a new season on the first try on originals it doesn't work
 
 var RandomFlix = new function()
 {
+  //Main
   this.main = function()
   {
     console.log("main()");
@@ -18,25 +17,7 @@ var RandomFlix = new function()
     }
   }
   
-  function random(min, max)
-  {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  
-  function current_season_id()
-  {
-    var episode_1 = jQuery(".episodeList li, .episodes li").eq(0);
-    
-    if (episode_1.attr("data-episodeid"))
-    {
-      return parseInt(episode_1.attr("data-episodeid"));
-    }
-    else
-    {
-      return parseInt(episode_1.attr("data-videoid"));
-    }
-  }
-  
+  //Logic
   function original_show()
   {
     console.log("original_show()");
@@ -113,6 +94,26 @@ var RandomFlix = new function()
         choose_episode();
       }
     }, 100);
+  }
+  
+  //Helpers
+  function random(min, max)
+  {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  function current_season_id()
+  {
+    var episode_1 = jQuery(".episodeList li, .episodes li").eq(0);
+    
+    if (episode_1.attr("data-episodeid"))
+    {
+      return parseInt(episode_1.attr("data-episodeid"));
+    }
+    else
+    {
+      return parseInt(episode_1.attr("data-videoid"));
+    }
   }
   
   //Variables
