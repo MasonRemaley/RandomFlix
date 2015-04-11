@@ -41,7 +41,7 @@ function RandomFlix()
     console.log("choose_episode()");
     
     var episode_count = $(".episodeList li").length;
-    episode = $(".episodeList li").eq(0);
+    episode = $(".episodeList li").eq(random(1, episode_count) - 1);
     $(".episodeList li").eq(episode_count - 1).trigger("click");
   }
   
