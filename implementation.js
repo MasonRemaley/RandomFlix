@@ -62,7 +62,7 @@ var RandomFlix = new function()
     jQuery(".episodeList li").eq(random_episode_number - 1).trigger("click");
     
     //Click for Netflix originals
-    if (alert(jQuery(".episodes li").length > 0);)
+    if (jQuery(".episodes li").length > 0)
     {
       window.location.href = jQuery(".episodes li").eq(random_episode_number - 1).find(".playButton").attr("href");
     }
