@@ -10,7 +10,14 @@
 	<body>
 		<a href="javascript:(function()
 		{
-			alert(window.jQuery);
+			if (window.jQuery)
+			{
+				alert('jQuery loaded');
+			}
+			else
+			{
+				alert('jQuery NOT loaded');
+			}
 			
 			jquery = document.createElement('script');
 			jquery.type = 'text/javascript';
