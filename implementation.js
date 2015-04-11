@@ -54,8 +54,8 @@ var RandomFlix = new function()
   {
     console.log("choose_episode()");
     
-    var episode_count = jQuery(".episodeList li").length;
-    jQuery(".episodeList li").eq(random(1, episode_count) - 1).trigger("click");
+    var episode_count = jQuery(".episodeList li, .episodes li").length;
+    jQuery(".episodeList li, .episodes li").eq(random(1, episode_count) - 1).trigger("click");
   }
   
   function choose_episode_after_update()
