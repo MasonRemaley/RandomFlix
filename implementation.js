@@ -4,11 +4,13 @@ var season_count = $("#seasonsNav li").length;
 var season = $("#seasonsNav li").eq(season_count - 1);
 var loading = $(".ajaxLoading");
 
+var episode_id = $(".episodeList li").eq(0).attr("data-episodeid");
 season.trigger("click");
 
 timer = setInterval(function()
 {
-  if (loading.css != "block")
+  //if (loading.css != "block")
+  if ($(".episodeList li").eq(0).attr("data-episodeid") != episode_id)
   {
     clearInterval(timer);
     
