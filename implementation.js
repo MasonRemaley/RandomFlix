@@ -7,7 +7,7 @@ var RandomFlix = new function()
 		var season_count = $("#seasonsNav li").length;
 		
 		$.when(
-			$("#seasonsNav li").eq(season_count - 1).trigger("click")
+			$("#seasonsNav li").eq(season_count - 1).triggerHandler("click")
 		).done(function()
 		{
 			var episode_count = $(".episodeList li").length;
