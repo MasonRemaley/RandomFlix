@@ -11,7 +11,7 @@ function RandomFlix()
   
   function current_season_id()
   {
-    return $(".episodeList li").eq(0).attr("data-episodeid");
+    return parseInt($(".episodeList li").eq(0).attr("data-episodeid"));
   }
   
   function main()
