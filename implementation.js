@@ -19,7 +19,7 @@ function RandomFlix()
     var season_count = $("#seasonsNav li").length;
     var season_number = random(0, season_count);
     original_season_id = current_season_id();
-    $("#seasonsNav li").eq(season_number - 1).trigger("click");
+    $("#seasonsNav li").eq(0).trigger("click");
   }
   
   function choose_episode()
