@@ -3,10 +3,11 @@
 var season_count = $("#seasonsNav li").length;
 alert("Seasons: " + season_count + " click last");
 
-$.when(
-  $("#seasonsNav li").eq(season_count - 1).trigger("click")
-).done(function()
+$("#seasonsNav li").eq(season_count - 1).bind("cssClassChanged", function()
 {
-  var episode_count = $(".episodeList li").length;
-  alert("Episodes: " + episode_count);
+  alert("Class changed!");
 });
+
+$("#seasonsNav li").eq(season_count - 1).trigger("click");
+//var episode_count = $(".episodeList li").length;
+//alert("Episodes: " + episode_count);
