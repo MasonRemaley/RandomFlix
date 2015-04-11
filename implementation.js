@@ -1,6 +1,6 @@
 //what if implementation.js loads BEFORE jquery? won't this script then FAIL?
 
-function RandomFlix()
+var RandomFlix = new function()
 {
   var original_season_id;
   
@@ -14,7 +14,7 @@ function RandomFlix()
     return parseInt($(".episodeList li").eq(0).attr("data-episodeid"));
   }
   
-  function main()
+  this.main = function()
   {
     console.log("main()");
     
@@ -63,8 +63,6 @@ function RandomFlix()
       }
     }, 100);
   }
-  
-  main();
 };
 
-RandomFlix();
+RandomFlix.main();
