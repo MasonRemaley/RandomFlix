@@ -2,9 +2,14 @@
 
 function RandomFlix()
 {
+  function random(min, max)
+  {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
   //Get season information
   var season_count = $("#seasonsNav li").length;
-  //alert("Random Season: " + );
+  alert("Random Season: " + random(1, 3) + " " + random(1, 3) + random(1, 3) + " " + random(1, 3));
   var season = $("#seasonsNav li").eq(season_count - 1);
   var first_episode_id = $(".episodeList li").eq(0).attr("data-episodeid");
   
