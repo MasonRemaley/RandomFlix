@@ -17,11 +17,10 @@ timer = setInterval(function()
   if (loading.css != "block")
   {
     clearInterval(timer);
+    alert("Done: " + loading.css("display"));
   }
 }, 100);
 //while (loading.css("display") == "block") {}
-
-alert("Done: " + loading.css("display"));
 
 //while (loading.css("display") != "none") {}
 
