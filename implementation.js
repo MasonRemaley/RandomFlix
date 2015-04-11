@@ -74,5 +74,5 @@ var RandomFlix = new function()
   }
 };
 
-alert("Test version 3");
+alert("Test version 4");
 RandomFlix.main();
