@@ -52,8 +52,11 @@ function RandomFlix()
     
     timer = setInterval(function()
     {
+      console.log(current_season_id() + " vs " + original_season_id);
+      
       if (current_season_id() != original_season_id)
       {
+        console.log("Done waiting");
         clearInterval(timer);
         choose_episode();
       }
