@@ -17,4 +17,11 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
 
 $( document ).ajaxComplete(function() {
   alert("Ajax complete!");
+  
 });
+
+$(document).ajaxError(function(e, jqxhr, settings, exception) {
+  alert(exception);
+});
+
+alert("Setup ajax handlers");
