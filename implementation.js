@@ -11,7 +11,7 @@ var RandomFlix = new function()
   
   function current_season_id()
   {
-    return parseInt($(".episodeList li").eq(0).attr("data-episodeid"));
+    return parseInt(jQuery(".episodeList li").eq(0).attr("data-episodeid"));
   }
   
   this.main = function()
@@ -20,10 +20,10 @@ var RandomFlix = new function()
     
     original_season_id = current_season_id();
     console.log("Original season id: " + original_season_id);
-    var original_season_number = $("#selectorButton .selectorTxt").html();
-    var season_count = $("#seasonsNav li").length;
+    var original_season_number = jQuery("#selectorButton .selectorTxt").html();
+    var season_count = jQuery("#seasonsNav li").length;
     var new_season_number = random(1, season_count);
-    $("#seasonsNav li").eq(new_season_number - 1).trigger("click"); //new_season_number - 1
+    jQuery("#seasonsNav li").eq(new_season_number - 1).trigger("click"); //new_season_number - 1
     
     console.log("Original Season: " + original_season_number);
     console.log("New Season: " + new_season_number);
@@ -42,8 +42,8 @@ var RandomFlix = new function()
   {
     console.log("choose_episode()");
     
-    var episode_count = $(".episodeList li").length;
-    $(".episodeList li").eq(random(1, episode_count) - 1).trigger("click");
+    var episode_count = jQuery(".episodeList li").length;
+    jQuery(".episodeList li").eq(random(1, episode_count) - 1).trigger("click");
   }
   
   function choose_episode_after_update()
