@@ -11,7 +11,16 @@ var RandomFlix = new function()
   
   function current_season_id()
   {
-    return parseInt(jQuery(".episodeList li, .episodes li").eq(0).attr("data-episodeid"));
+    var episode_1 = jQuery(".episodeList li, .episodes li").eq(0);
+    
+    if (episode_1.attr("data-episodeid"))
+    {
+      return parseInt(episode_1.attr("data-episodeid"));
+    }
+    else
+    {
+      return parseInt(episode_1.attr("data-videoid"));
+    }
   }
   
   this.main = function()
