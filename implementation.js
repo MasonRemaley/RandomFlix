@@ -43,9 +43,9 @@ function RandomFlix()
     }, 100);
   }
   
-  alert($("#selectorButton .selectorText").html());
+  alert($("#selectorButton .selectorTxt").html());
   choose_season();
-  choose_episode_after_update();
+  //choose_episode_after_update();
 };
 
 RandomFlix();
