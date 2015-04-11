@@ -1,6 +1,6 @@
 //Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 //Use smaller delay in loop if that hmakes it faster
-//
+//if it goes to a new season on the first try on originals it doesn't work
 
 var RandomFlix = new function()
 {
@@ -62,11 +62,9 @@ var RandomFlix = new function()
     jQuery(".episodeList li").eq(random_episode_number - 1).trigger("click");
     
     //Click for Netflix originals
-    play_button = jQuery(".episodes li").eq(random_episode_number - 1).find(".playButton");
-    
-    if (play_button)
+    if (alert(jQuery(".episodes li").length > 0);)
     {
-      window.location.href = play_button.attr("href");
+      window.location.href = jQuery(".episodes li").eq(random_episode_number - 1).find(".playButton").attr("href");
     }
   }
   
