@@ -13,6 +13,7 @@ timer = setInterval(function()
     clearInterval(timer);
     
     var episode_count = $(".episodeList li").length;
+    alert("Click 0");
     $("#episodeList li").eq(0).trigger("click");
     //alert("Episodes: " + episode_count);
   }
