@@ -19,6 +19,7 @@ function RandomFlix()
     console.log("main()");
     
     original_season_id = current_season_id();
+    console.log("Original season id: " + original_season_id);
     var original_season_number = $("#selectorButton .selectorTxt").html();
     var season_count = $("#seasonsNav li").length;
     var new_season_number = random(1, season_count);
