@@ -6,13 +6,12 @@ var season_count = $("#seasonsNav li").length;
 var season = $("#seasonsNav li").eq(season_count - 1);
 var loading = $(".ajaxLoading");
 //alert(season.hasClass("selected"));
-alert(loading.css("display") == "none");
+alert(loading.css("display"));
 season.trigger("click");
-alert(loading.css("display") == "none");
+alert(loading.css("display"));
 
-while (loading.css("display") != "none") {}
+//while (loading.css("display") != "none") {}
 
-alert("Done: " + (loading.css("display") == "none"));
 //alert(season.hasClass("selected"));
 
 //var episode_count = $(".episodeList li").length;
