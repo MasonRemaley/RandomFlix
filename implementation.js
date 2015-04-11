@@ -1,3 +1,4 @@
+alert("TEST");
 var RandomFlix = new function()
 {
 	this.run = function()
