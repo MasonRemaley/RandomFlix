@@ -1,4 +1,4 @@
-//what if implementation.js loads BEFORE jquery? won't this script then FAIL?
+//Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 
 var RandomFlix = new function()
 {
