@@ -9,12 +9,12 @@ function RandomFlix()
   
   //Get season information
   var season_count = $("#seasonsNav li").length;
-  alert("Random Season: " + random(1, 3) + " " + random(1, 3) + " " + random(1, 3) + " " + random(1, 3));
-  var season = $("#seasonsNav li").eq(season_count - 1);
+  var season_number = random(0, season_count);
+  var season = $("#seasonsNav li").eq(season_number - 1);
   var first_episode_id = $(".episodeList li").eq(0).attr("data-episodeid");
   
   //Click on a season
-  /*season.trigger("click");
+  season.trigger("click");
   
   //Wait until the season updates
   timer = setInterval(function()
@@ -28,7 +28,7 @@ function RandomFlix()
       episode = $(".episodeList li").eq(0);
       $(".episodeList li").eq(episode_count - 1).trigger("click");
     }
-  }, 100);*/
+  }, 100);
 };
 
 RandomFlix();
