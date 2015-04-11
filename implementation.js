@@ -1,7 +1,8 @@
 var RandomFlix = new function()
 {
-	this.count_episodes = function()
+	this.run = function()
 	{
+		alert("Run bookmarklet");
 		//alert("Number Of Seasons: " + $("#seasonsNav li").length)
 		//alert("Number Of Episodes In This Season: " + $(".episodeList li").length);
 		var season_count = $("#seasonsNav li").length;
