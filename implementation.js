@@ -1,8 +1,8 @@
 //what if implementation.js loads BEFORE jquery? won't this script then FAIL?
 
-//Get season information
 function RandomFlix()
 {
+  //Get season information
   var season_count = $("#seasonsNav li").length;
   //alert("Random Season: " + );
   var season = $("#seasonsNav li").eq(season_count - 1);
