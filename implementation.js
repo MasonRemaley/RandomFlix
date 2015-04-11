@@ -9,6 +9,10 @@ var loading = $(".ajaxLoading");
 alert(loading.css("display") == "none");
 season.trigger("click");
 alert(loading.css("display") == "none");
+
+while (loading.css("display") != "none") {}
+
+alert("Done: " + (loading.css("display") == "none"));
 //alert(season.hasClass("selected"));
 
 //var episode_count = $(".episodeList li").length;
