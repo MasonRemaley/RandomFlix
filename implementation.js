@@ -8,9 +8,9 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
   alert("Clicked");
 });
 
-$.when(
-  $("#seasonsNav li").eq(season_count - 1).trigger("click")
-).done(function()
-{
+//$.when(
+  $("#seasonsNav li").eq(season_count - 1).trigger("click");
+//).done(function()
+//{
   alert("Done clicking with 'when'");
-});
+//});
