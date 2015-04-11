@@ -2,6 +2,8 @@
 
 function RandomFlix()
 {
+  var original_season_id;
+  
   function random(min, max)
   {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -12,25 +14,33 @@ function RandomFlix()
     return $(".episodeList li").eq(0).attr("data-episodeid");
   }
   
-  //Click on a random season
-  var season_count = $("#seasonsNav li").length;
-  var season_number = random(0, season_count);
-  var original_season_id = current_season_id();
-  $("#seasonsNav li").eq(season_number - 1).trigger("click");
-  
-  //Wait until the season updates
-  timer = setInterval(function()
+  function choose_season()
   {
-    if (current_season_id() != original_season_id)
+    var season_count = $("#seasonsNav li").length;
+    var season_number = random(0, season_count);
+    original_season_id = current_season_id();
+    $("#seasonsNav li").eq(season_number - 1).trigger("click");
+  }
+  
+  function do_stuff()
+  {
+    //Wait until the season updates
+    timer = setInterval(function()
     {
-      clearInterval(timer);
-      
-      //Click on the last episode
-      var episode_count = $(".episodeList li").length;
-      episode = $(".episodeList li").eq(0);
-      $(".episodeList li").eq(episode_count - 1).trigger("click");
-    }
-  }, 100);
+      if (current_season_id() != original_season_id)
+      {
+        clearInterval(timer);
+        
+        //Click on the last episode
+        var episode_count = $(".episodeList li").length;
+        episode = $(".episodeList li").eq(0);
+        $(".episodeList li").eq(episode_count - 1).trigger("click");
+      }
+    }, 100);
+  }
+  
+  choose_season();
+  do_stuff();
 };
 
 RandomFlix();
