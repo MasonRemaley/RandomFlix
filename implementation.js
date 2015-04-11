@@ -20,8 +20,8 @@ function RandomFlix()
     
     var original_season_number = $("#selectorButton .selectorTxt").html();
     var season_count = $("#seasonsNav li").length;
-    var new_season_number = random(0, season_count);
-    $("#seasonsNav li").eq(0).trigger("click"); //new_season_number - 1
+    var new_season_number = random(1, season_count);
+    $("#seasonsNav li").eq(season_count - 1).trigger("click"); //new_season_number - 1
     
     if (original_season_number == new_season_number)
     {
