@@ -20,7 +20,7 @@ var RandomFlix = new function()
     
     original_season_id = current_season_id();
     console.log("Original season id: " + original_season_id);
-    var original_season_number = Number(String(jQuery("#selectorButton .selectorTxt").html()).split(" ").pop());
+    var original_season_number = String(jQuery("#selectorButton .selectorTxt").html()).split(" ").pop();
     var season_count = jQuery("#seasonsNav li").length;
     var new_season_number = random(1, season_count);
     jQuery("#seasonsNav li").eq(new_season_number - 1).trigger("click"); //new_season_number - 1
@@ -64,5 +64,5 @@ var RandomFlix = new function()
   }
 };
 
-alert("Test version");
+alert("Test version 2");
 RandomFlix.main();
