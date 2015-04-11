@@ -22,7 +22,15 @@ function RandomFlix()
     $("#seasonsNav li").eq(season_number - 1).trigger("click");
   }
   
-  function do_stuff()
+  function choose_episode()
+  {
+    //Click on the last episode
+    var episode_count = $(".episodeList li").length;
+    episode = $(".episodeList li").eq(0);
+    $(".episodeList li").eq(episode_count - 1).trigger("click");
+  }
+  
+  function choose_episode_after_update()
   {
     //Wait until the season updates
     timer = setInterval(function()
@@ -30,17 +38,13 @@ function RandomFlix()
       if (current_season_id() != original_season_id)
       {
         clearInterval(timer);
-        
-        //Click on the last episode
-        var episode_count = $(".episodeList li").length;
-        episode = $(".episodeList li").eq(0);
-        $(".episodeList li").eq(episode_count - 1).trigger("click");
+        choose_episode();
       }
     }, 100);
   }
   
   choose_season();
-  do_stuff();
+  choose_episode_after_update();
 };
 
 RandomFlix();
