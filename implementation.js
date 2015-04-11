@@ -1,10 +1,24 @@
 //Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 //Use smaller delay in loop if that hmakes it faster
 //if it goes to a new season on the first try on originals it doesn't work
-
+alert("New");
 var RandomFlix = new function()
 {
   var original_season_id;
+  
+  this.main = function()
+  {
+    console.log("main()");
+    
+    if (jQuery(".seasons").length > 0)
+    {
+      original_show();
+    }
+    else
+    {
+      normal_show();
+    }
+  }
   
   function random(min, max)
   {
@@ -101,20 +115,6 @@ var RandomFlix = new function()
         choose_episode();
       }
     }, 100);
-  }
-  
-  this.main = function()
-  {
-    console.log("main()");
-    
-    if (jQuery(".seasons").length > 0)
-    {
-      original_show();
-    }
-    else
-    {
-      normal_show();
-    }
   }
 };
 
