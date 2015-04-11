@@ -56,8 +56,14 @@ var RandomFlix = new function()
     
     var episode_count = jQuery(".episodeList li, .episodes li").length;
     var random_episode_number = random(1, episode_count);
-    console.log("Choose numbeer " + random_episode_number);
-    jQuery(".episodeList li, .episodes li").eq(random_episode_number - 1).trigger("click");
+    console.log("Choose number " + random_episode_number);
+    
+    //Click for normal shows
+    jQuery(".episodeList li").eq(random_episode_number - 1).trigger("click");
+    
+    //Click for Netflix originals
+    jQuery(".episodes li").eq(random_episode_number - 1).find(".playButton").trigger("click");
+    
   }
   
   function choose_episode_after_update()
