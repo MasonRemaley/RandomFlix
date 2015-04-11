@@ -54,6 +54,7 @@ function RandomFlix()
     }, 100);
   }
   
+  alert("Go");
   main();
 };
 
