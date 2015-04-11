@@ -16,5 +16,5 @@ $("#seasonsNav li").eq(season_count - 1).click(function()
 //});*/
 
 $( document ).ajaxComplete(function() {
-  $( ".log" ).text( "Triggered ajaxComplete handler." );
+  alert("Ajax complete!");
 });
