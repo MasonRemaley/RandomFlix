@@ -12,14 +12,11 @@ function RandomFlix()
     return $(".episodeList li").eq(0).attr("data-episodeid");
   }
   
-  //Pick a random season
+  //Click on a random season
   var season_count = $("#seasonsNav li").length;
   var season_number = random(0, season_count);
-  var season = $("#seasonsNav li").eq(season_number - 1);
   var original_season_id = current_season_id();
-  
-  //Click on a season
-  season.trigger("click");
+  $("#seasonsNav li").eq(season_number - 1).trigger("click");
   
   //Wait until the season updates
   timer = setInterval(function()
