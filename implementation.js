@@ -32,6 +32,9 @@ var RandomFlix = new function()
     var episode_count = jQuery(".episode").length;
     var episode_number = random(1, episode_count);
     
+    console.log("Total Number of Episodes: " + episode_count);
+    console.log("Episode Chosen: " + episode_number);
+    
     window.location.href = jQuery(".episodes li").eq(episode_number - 1).find(".playButton").attr("href");
   }
   
