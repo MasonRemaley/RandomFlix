@@ -1,11 +1,9 @@
 //Sometimes you have to click multiple times, maybe jquery doesn't get loaded in time?
 //Use smaller delay in loop if that hmakes it faster
 //if it goes to a new season on the first try on originals it doesn't work
-alert("New");
+
 var RandomFlix = new function()
 {
-  var original_season_id;
-  
   this.main = function()
   {
     console.log("main()");
@@ -116,6 +114,9 @@ var RandomFlix = new function()
       }
     }, 100);
   }
+  
+  //Variables
+  var original_season_id;
 };
 
 RandomFlix.main();
