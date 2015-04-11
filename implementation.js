@@ -93,7 +93,7 @@ var RandomFlix = new function()
         clearInterval(timer);
         choose_episode();
       }
-    }, 100);
+    }, 10);
   }
   
   //Helpers
