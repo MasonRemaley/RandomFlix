@@ -6,23 +6,22 @@ var season_count = $("#seasonsNav li").length;
 var season = $("#seasonsNav li").eq(season_count - 1);
 var loading = $(".ajaxLoading");
 //alert(season.hasClass("selected"));
-alert(loading.css("display"));
+//alert(loading.css("display"));
 season.trigger("click");
-alert(loading.css("display"));
+//alert(loading.css("display"));
 
 timer = setInterval(function()
 {
-  alert(loading.css("display"));
+  //alert(loading.css("display"));
   
   if (loading.css != "block")
   {
-    alert("Done");
     clearInterval(timer);
   }
 }, 100);
 //while (loading.css("display") == "block") {}
 
-alert(loading.css("display"));
+alert("Done: " + loading.css("display"));
 
 //while (loading.css("display") != "none") {}
 
