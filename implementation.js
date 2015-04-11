@@ -7,5 +7,5 @@ $.when(
   $("#seasonsNav li").eq(season_count - 1).trigger("click")
 ).done(function()
 {
-  alert("Done clicking");
+  alert("Done clicking with 'when'");
 });
