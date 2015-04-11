@@ -1,6 +1,6 @@
-var RandomFlix =
+var RandomFlix = new function()
 {
-	function count_episodes()
+	this.count_episodes = function()
 	{
 		alert($(".episodeList li").length);
 	}
