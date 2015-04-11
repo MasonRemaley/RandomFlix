@@ -91,7 +91,6 @@ var RandomFlix = new function()
   this.main = function()
   {
     console.log("main()");
-    alert("?");
     
     if (jQuery(".seasons").length > 0)
     {
