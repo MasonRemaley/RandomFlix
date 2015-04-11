@@ -10,5 +10,3 @@ $.when(
   var episode_count = $(".episodeList li").length;
   alert("Episodes: " + episode_count);
 });
-
-alert("when");
