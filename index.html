@@ -11,14 +11,17 @@
   <title>RandomFlix | Random Episode Bookmarklet for Netflix</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
-  	if ($.browser.safari)
+  	$(document).ready(function()
   	{
-  		console.log("Safari");
-  	}
-  	else
-  	{
-  		console.log("Not safari");
-  	}
+	  	if ($.browser.safari)
+	  	{
+	  		console.log("Safari");
+	  	}
+	  	else
+	  	{
+	  		console.log("Not safari");
+	  	}
+  	});
   </script>
 </head>
 
