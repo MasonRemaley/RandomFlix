@@ -9,21 +9,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
   <title>RandomFlix | Random Episode Bookmarklet for Netflix</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script>
-  	$(document).ready(function()
-  	{
-  		console.log("Update");
-	  	if ($.browser.safari)
-	  	{
-	  		console.log("Safari");
-	  	}
-	  	else
-	  	{
-	  		console.log("Not safari");
-	  	}
-  	});
-  </script>
 </head>
 
 <body>
@@ -58,18 +43,13 @@
         randomflix.src = 'http://masonremaley.github.io/RandomFlix/javascript/implementation.js';
         document.getElementsByTagName('head')[0].appendChild(randomflix);
       })();">RandomFlix</a></p>
-
-      <p hidden="" id="firefox-bar"><em>In Firefox, the bookmarks bar is not enabled by default. To enable it, right-click (or control-click) on the toolbar and then check the "Bookmarks Bar" option.</em></p>
-      <p hidden="" id="chrome-bar"><em>In Chrome, the bookmarks bar is not enabled by default. To enable it on windows, press Control-Shift-B. On OSX, press Command-Shift-B.</em></p>
-
+      
+      <p><i>(If your bookmarks bar is disabled or you're not sure what a bookmarks bar is, a quick google search for "show bookmarks bar [your browser]" should result in instructions on enabling your bookmarks bar.)</i></p>
+	
       <!-- Instructions -->
       <h3><a id="instructions" class="anchor" href="#instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instructions</h3>
 
       <p>Navigate to the Netflix show you want to watch. Click on the RandomFlix button in your bookmarks bar. That's it, have fun!</p>
-
-      <!--<p hidden="" id="firefox-error"><em>Firefox blocks mixed http/https content, this may prevent this bookmarklet from running properly. If this is an issue for you, you can switch to another browser or install a plugin such as <a href="https://addons.mozilla.org/en-us/firefox/addon/toggle-mixed-active-content/">this one</a> to fix the problem.</em></p>-->
-
-
 
     </section>
   </div>
