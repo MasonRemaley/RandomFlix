@@ -31,18 +31,18 @@
   <!-- MAIN CONTENT -->
   <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
-    
-      <p></p>This simple bookmarklet gives Netflix TV shows a random-episode functionality.</p>
+
+      <p>This simple bookmarklet gives Netflix TV shows a random-episode functionality.</p>
       <!-- Installation -->
       <h3><a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-      <a href="javascript:(function()
-		  {
-		  	randomflix = document.createElement('script');
-		  	randomflix.type = 'text/javascript';
-		  	randomflix.src = 'http://masonremaley.github.io/RandomFlix/implementation.js';
-		  	document.getElementsByTagName('head')[0].appendChild(randomflix);
-		  })();">Drag this link to your bookmarks bar!</a>
+	<p>Drag this link to your bookmarks bar: 
+      <a href="javascript:(function(){
+        randomflix = document.createElement('script');
+        randomflix.type = 'text/javascript';
+        randomflix.src = 'http://masonremaley.github.io/RandomFlix/implementation.js';
+        document.getElementsByTagName('head')[0].appendChild(randomflix);
+      })();">RandomFlix</a></p>
 
       <p hidden="" id="firefox-bar"><em>In Firefox, the bookmarks bar is not enabled by default. To enable it, right-click (or control-click) on the toolbar and then check the "Bookmarks Bar" option.</em></p>
       <p hidden="" id="chrome-bar"><em>In Chrome, the bookmarks bar is not enabled by default. To enable it on windows, press Control-Shift-B. On OSX, press Command-Shift-B.</em></p>
