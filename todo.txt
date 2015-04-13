@@ -1,1 +1,2 @@
  - Use a cookie containing episode + show name to prevent the same episode from being chosen twice in a row?
+ - Since Netflix uses jQuery, I could use jQuery to install the bookmarklet instead of plain js
