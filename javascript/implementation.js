@@ -1,6 +1,6 @@
 console.log("RandomFlix loaded");
 
-var RandomFlix = new function()
+/*var RandomFlix = new function()
 {
   //Main
   this.main = function()
@@ -128,4 +128,4 @@ var RandomFlix = new function()
   var original_season_id;
 };
 
-RandomFlix.main();
+RandomFlix.main();*/
