@@ -1,3 +1,5 @@
+console.log("RandomFlix loaded");
+
 var RandomFlix = new function()
 {
   //Main
