@@ -5,6 +5,14 @@ var RandomFlix = new function()
   {
     console.log("main()");
     
+    //Load JQuery
+    var jquery = document.createElement("RandomFlix_jquery");
+    jquery.type = "text/javascript";
+    jquery.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";
+  
+    document.getElementsByTagName("head")[0].appendChild(jquery);
+    
+    // Check Show Type
     if (jQuery(".seasons").length > 0)
     {
       original_show();
